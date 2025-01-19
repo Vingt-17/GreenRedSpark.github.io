@@ -46,6 +46,11 @@
         .language-switch button:hover {
             background-color: #005fa3;
         }
+        .content-ar {
+            display: none;
+            direction: rtl;
+            text-align: right;
+        }
         main {
             padding: 2rem;
         }
@@ -81,46 +86,66 @@
             background-color: #005fa3;
         }
     </style>
+    <script>
+        function switchLanguage(language) {
+            document.querySelectorAll('.content-en').forEach(el => el.style.display = language === 'en' ? 'block' : 'none');
+            document.querySelectorAll('.content-ar').forEach(el => el.style.display = language === 'ar' ? 'block' : 'none');
+        }
+    </script>
 </head>
 <body>
     <div class="language-switch">
-        <button onclick="alert('Switching to Arabic')">عربي</button>
-        <button onclick="alert('Switching to English')">English</button>
+        <button onclick="switchLanguage('ar')">عربي</button>
+        <button onclick="switchLanguage('en')">English</button>
     </div>
     <header>
         <h1>RedGreen Spark</h1>
-        <p>Bienvenue sur RedGreen Spark</p>
+        <p class="content-en">Welcome to RedGreen Spark</p>
+        <p class="content-ar">مرحبًا بكم في ريد غرين سبارك</p>
     </header>
     <main>
         <section id="home">
-            <h2>Accueil</h2>
-            <p>Ce dépôt est l'endroit où nous organisons et mettons l'ensemble des contenus d'AlifLearn. Vous y trouverez toutes les ressources classées, allant des cours et exercices aux outils pédagogiques, afin de faciliter l'accès à un apprentissage structuré et complet.</p>
+            <h2 class="content-en">Home</h2>
+            <h2 class="content-ar">الرئيسية</h2>
+            <p class="content-en">This repository organizes all AlifLearn content, including courses and exercises, to facilitate structured and complete learning.</p>
+            <p class="content-ar">هذا المستودع ينظم جميع محتويات ألف ليرن، بما في ذلك الدروس والتمارين، لتسهيل التعلم المنظم والشامل.</p>
         </section>
         <section id="formation">
-            <h2>Formation</h2>
+            <h2 class="content-en">Formation</h2>
+            <h2 class="content-ar">التكوين</h2>
             <div>
-                <h3>Baccalauréat</h3>
-                <p>Accédez à des ressources dédiées aux étudiants préparant leur baccalauréat.</p>
+                <h3 class="content-en">Baccalauréat</h3>
+                <h3 class="content-ar">البكالوريا</h3>
+                <p class="content-en">Access resources dedicated to students preparing for their Baccalaureate.</p>
+                <p class="content-ar">الوصول إلى موارد مخصصة للطلاب الذين يستعدون للحصول على شهادة البكالوريا.</p>
             </div>
             <div>
-                <h3>Études Supérieures</h3>
-                <p>Explorez nos guides et supports pour réussir vos études universitaires.</p>
+                <h3 class="content-en">Higher Studies</h3>
+                <h3 class="content-ar">الدراسات العليا</h3>
+                <p class="content-en">Explore our guides and support to succeed in university studies.</p>
+                <p class="content-ar">استكشف أدلتنا ودعمنا للنجاح في الدراسات الجامعية.</p>
             </div>
         </section>
         <section id="outils">
-            <h2>Outils et logiciels</h2>
+            <h2 class="content-en">Tools and Software</h2>
+            <h2 class="content-ar">الأدوات والبرامج</h2>
             <div>
-                <h3>Matlab</h3>
-                <p>Découvrez des outils pour Matlab et des ressources pour améliorer vos compétences.</p>
+                <h3 class="content-en">Matlab</h3>
+                <h3 class="content-ar">ماتلاب</h3>
+                <p class="content-en">Discover tools for Matlab and resources to enhance your skills.</p>
+                <p class="content-ar">اكتشف أدوات لماتلاب وموارد لتحسين مهاراتك.</p>
             </div>
             <div>
-                <h3>C++</h3>
-                <p>Accédez à des supports et exercices pour apprendre et maîtriser le langage C++.</p>
+                <h3 class="content-en">C++</h3>
+                <h3 class="content-ar">سي++</h3>
+                <p class="content-en">Access support and exercises to learn and master C++ programming.</p>
+                <p class="content-ar">الوصول إلى الدعم والتمارين لتعلم وإتقان برمجة سي++.</p>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 RedGreen Spark. Tous droits réservés.</p>
+        <p class="content-en">&copy; 2025 RedGreen Spark. All rights reserved.</p>
+        <p class="content-ar">&copy; 2025 ريد غرين سبارك. جميع الحقوق محفوظة.</p>
     </footer>
 </body>
 </html>
