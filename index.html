@@ -28,18 +28,23 @@
             margin-top: 0;
             font-size: 1.2rem;
         }
-        nav {
-            text-align: center;
-            margin-top: 1rem;
+        .language-switch {
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
-        nav a {
-            color: #f4f4f4;
-            text-decoration: none;
-            margin: 0 1rem;
+        .language-switch button {
+            padding: 0.5rem 1rem;
             font-size: 1rem;
+            color: white;
+            background-color: #0078D7;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
         }
-        nav a:hover {
-            color: #ff5722;
+        .language-switch button:hover {
+            background-color: #005fa3;
         }
         main {
             padding: 2rem;
@@ -78,88 +83,40 @@
     </style>
 </head>
 <body>
+    <div class="language-switch">
+        <button onclick="alert('Switching to Arabic')">عربي</button>
+        <button onclick="alert('Switching to English')">English</button>
+    </div>
     <header>
         <h1>RedGreen Spark</h1>
         <p>Bienvenue sur RedGreen Spark</p>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="formation.html">Formation</a>
-            <a href="outils.html">Outils et logiciels</a>
-        </nav>
     </header>
     <main>
         <section id="home">
             <h2>Accueil</h2>
             <p>Ce dépôt est l'endroit où nous organisons et mettons l'ensemble des contenus d'AlifLearn. Vous y trouverez toutes les ressources classées, allant des cours et exercices aux outils pédagogiques, afin de faciliter l'accès à un apprentissage structuré et complet.</p>
-            <button onclick="window.location.href='https://youtube.com'">YouTube</button>
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 RedGreen Spark. Tous droits réservés.</p>
-    </footer>
-</body>
-</html>
-
-<!-- formation.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Formation</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="formation.html">Formation</a>
-            <a href="outils.html">Outils et logiciels</a>
-        </nav>
-    </header>
-    <main>
-        <section id="baccalaureat">
-            <h2>Baccalauréat</h2>
-            <p>Accédez à des ressources dédiées aux étudiants préparant leur baccalauréat.</p>
+        <section id="formation">
+            <h2>Formation</h2>
+            <div>
+                <h3>Baccalauréat</h3>
+                <p>Accédez à des ressources dédiées aux étudiants préparant leur baccalauréat.</p>
+            </div>
+            <div>
+                <h3>Études Supérieures</h3>
+                <p>Explorez nos guides et supports pour réussir vos études universitaires.</p>
+            </div>
         </section>
-        <section id="etudes-superieures">
-            <h2>Études Supérieures</h2>
-            <p>Explorez nos guides et supports pour réussir vos études universitaires.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 RedGreen Spark. Tous droits réservés.</p>
-    </footer>
-</body>
-</html>
-
-<!-- outils.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outils et logiciels</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Outils et logiciels</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="formation.html">Formation</a>
-            <a href="outils.html">Outils et logiciels</a>
-        </nav>
-    </header>
-    <main>
-        <section id="matlab">
-            <h2>Matlab</h2>
-            <p>Découvrez des outils pour Matlab et des ressources pour améliorer vos compétences.</p>
-        </section>
-        <section id="cpp">
-            <h2>C++</h2>
-            <p>Accédez à des supports et exercices pour apprendre et maîtriser le langage C++.</p>
+        <section id="outils">
+            <h2>Outils et logiciels</h2>
+            <div>
+                <h3>Matlab</h3>
+                <p>Découvrez des outils pour Matlab et des ressources pour améliorer vos compétences.</p>
+            </div>
+            <div>
+                <h3>C++</h3>
+                <p>Accédez à des supports et exercices pour apprendre et maîtriser le langage C++.</p>
+            </div>
         </section>
     </main>
     <footer>
